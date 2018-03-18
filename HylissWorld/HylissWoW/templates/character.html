@@ -1,0 +1,61 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class="container" style="background-image:url({{ thumbnail }}); background-position: center; background-size: cover; position: absolute; width:100%; height: 100%; top:50px;">
+
+      	<div class="row">
+      		<!-- Title and item level -->
+      		<div class="col-xs-12">
+      			<center id="title">
+      				<h1> {{ pseudo }}-{{ serveur }}</h1>
+      				<h1> {{ itemlevel }}/{{ Avitemlevel }} </h1>
+      			</center>
+      		</div>
+      		<div class="col-xs-12" style="margin-top:300px;">
+	            <div class="col-xs-6">
+	            	<!-- Left column containing the items images -->
+	            	<div class = "items-images-left">
+		              <img src="{{ head }}" alt="Head">
+		              <img src="{{ neck }}" alt="Neck">
+		              <img src="{{ shoulder }}" alt="Shoulders">
+		              <img src="{{ back }}" alt="Back">
+		              <img src="{{ chest }}" alt="Chest">
+		              <img src="{{ shirt }}" alt="Shirt">
+		              <img src="{{ tabard }}" alt="Tabard">
+		              <img src="{{ wrist }}" alt="Wrist">
+	          		</div>
+	          	</div>
+	          	<!-- Right column containing the items images -->
+	          	<div class="col-xs-6">
+	          		<!-- Right column containing the items images -->
+	          		<div class = "items-images-right">
+	          		  <img src="{{ hands }}" alt="Hands">
+		              <img src="{{ waist }}" alt="Waist">
+		              <img src="{{ legs }}" alt="Legs">
+		              <img src="{{ feet }}" alt="Feet">
+		              <img src="{{ finger1 }}" alt="Finger-1">
+		              <img src="{{ finger2 }}" alt="Finger-2">
+		              <img src="{{ trinket1 }}" alt="Trinket-1">
+		              <img src="{{ trinket2 }}" alt="Trinket-2">
+	          		</div>
+	          	</div>
+	        </div>
+        </div>
+        
+  </div>
+
+        <div class="center-block">
+          <h1 style="color:white;"> {{ itemlevel }}/{{ Avitemlevel }} </h1>
+              <br/>
+              <img src="{{ head }}" alt="Head">
+              <br/>
+              <img src="{{ neck }}" alt="Neck" >
+          <br/>
+              <img src="{{ shoulder }}" alt="Shoulders">
+          <br/>
+              <img src="{{ chest2 }}" alt="Neck">
+          
+     
+    
+      </div>
+{% endblock %}

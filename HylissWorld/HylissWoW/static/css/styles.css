@@ -1,0 +1,18 @@
+
+
+
+
+
+
+#title {color:white;}
+.items-images-right {
+	float:right;
+	margin-right: 1%;
+}
+.items-images-left{
+	margin-left:1%;
+}
+.items-images-left img,.items-images-right img {
+	display: block;
+	margin-top: 7px;
+}
