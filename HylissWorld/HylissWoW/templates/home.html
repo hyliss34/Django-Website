@@ -1,0 +1,44 @@
+{% extends "index.html" %}
+
+{% block content %}
+<div class=col-xs-4>
+	<form action="" method="post">
+	    {% csrf_token %}
+	    {{ form.as_p }}
+		<br/>
+		<!-- submit -->
+	    <input type="submit" value="Submit" />
+	</form>
+</div>
+
+
+
+<div class=col-xs-4>
+	Ficker
+</div>
+
+<div class=col-xs-4>
+
+</div>
+<script type="text/javascript">
+	var reg_loc = {'eu': ['en_GB', 'de_DE', 'es_ES', 'fr_FR', 'it_IT', 'pl_PL','pt_PT','ru_RU'], 'us': ['en_US', 'pt_BR', 'es_MX']};
+
+	// Update locals list
+	document.getElementById('id_region').onchange = function() {Update_loc();};
+	function Update_loc() {
+		// Empty the list
+		local_list = document.getElementById('id_local');
+		local_list.innerHTML = '';
+		var reg = document.getElementById('id_region').value;
+		var locals = reg_loc[reg];
+		for(loc in locals) {
+			local = locals[loc];
+			var option = document.createElement("option");
+			option.innerHTML = local;
+			option.value = local;
+			local_list.add(option ,null)
+		}
+	};
+		
+</script>
+{% endblock %}
